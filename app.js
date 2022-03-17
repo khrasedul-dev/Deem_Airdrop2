@@ -270,6 +270,30 @@ bot.on('new_chat_members',ctx=>{
 
 })
 
+bot.on('text',ctx=>{
+
+    const message = ctx.update.message.text
+    const r = /Whitelist/gi
+
+   if(message.match(r)){
+      checkGroup.find({userId: ctx.from.id}).then((data)=>{
+        if (data.length > 0 ) {
+           
+            console.log("User exist")
+            
+        } else {
+            const data = new checkGroup({
+                userId: ctx.from.id
+            })
+
+            data.save().catch((e)=>console.log(e))
+        }
+
+    }).catch((e)=>console.log(e))
+  }
+
+})
+
 
 bot.hears('🌍 Official Website',ctx=>{
 
