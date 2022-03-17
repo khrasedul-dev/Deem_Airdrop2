@@ -44,7 +44,7 @@ const userStep = new WizardScene('userStep',
 
             if (users.length > 0) {
 
-                ctx.telegram.sendMessage(ctx.chat.id , `✅ Follow us on Twitter\nhttps://twitter.com/deemtoken?t=3w6q51G4d41RlbLijbdglw&s=09 \n▪️Retweet the pinned post \n▪️Tag 3 friends. \n\nThen submit your Twitter profile link: \n(Example: https://twitter.com/username)`,{
+                ctx.telegram.sendMessage(ctx.chat.id , `✅ Follow us on Twitter\nhttps://twitter.com/deemtoken \n▪️Retweet the pinned post \n▪️Tag 3 friends. \n\nThen submit your Twitter profile link: \n(Example: https://twitter.com/username)`,{
                     reply_markup: {
                         remove_keyboard: true
                     }
