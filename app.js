@@ -282,7 +282,11 @@ bot.hears('👤 Account',ctx=>{
 
     userModel.find({userId: ctx.from.id}).then((user)=>{
         ctx.telegram.sendMessage(ctx.chat.id , `<b>👤 Name:</b> ${user[0].name} \n<b>💴 Balance:</b> ${user[0].balance} \n<b>👥 Total Referrals:</b> ${user[0].ref_count} \n\n<b>🎞 Your Referral link:</b> \nhttps://t.me/${ctx.botInfo.username}?start=${ctx.from.id}`,{
+<<<<<<< HEAD
            
+=======
+            
+>>>>>>> da8b6c597d466808a04995fdd8f3b776f399a5e4
             parse_mode: "HTML"
         })
     })
