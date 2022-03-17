@@ -28,7 +28,7 @@ const userStep = new WizardScene('userStep',
 
     ctx=>{
 
-        ctx.telegram.sendMessage(ctx.chat.id , `Hello ${ctx.from.first_name} ! To participate in our Airdrop, first please 👇 \n\n▪️Join our Telegram Group.\nhttps://t.me/deemtoken \n▪️Join our Telegram Channel.\nhttps://t.me/deemnews \n\nClick the '✅ Check' button if done..`,{
+        ctx.telegram.sendMessage(ctx.chat.id , `Hello ${ctx.from.first_name} ! To participate in our Airdrop, first please 👇 \n\n▪️Join our <a href="https://t.me/deemtoken">Telegram Group</a>\n▪️Join our <a href="https://t.me/deemnews">Telegram Channel</a>. \n\nClick the '✅ Check' button if done..`,{
             reply_markup: {
                 inline_keyboard: [
                     [{text: "✅ Check" , callback_data: "checkGroup"}]
@@ -44,7 +44,7 @@ const userStep = new WizardScene('userStep',
 
             if (users.length > 0) {
 
-                ctx.telegram.sendMessage(ctx.chat.id , `✅ Follow us on Twitter\nhttps://twitter.com/deemtoken \n▪️Retweet the pinned post \n▪️Tag 3 friends. \n\nThen submit your Twitter profile link: \n(Example: https://twitter.com/username)`,{
+                ctx.telegram.sendMessage(ctx.chat.id , `✅ Follow us on <a href="https://twitter.com/deemtoken">Twitter</a> \n▪️Retweet the pinned post \n▪️Tag 3 friends. \n\nThen submit your Twitter profile link: \n(Example: https://twitter.com/username)`,{
                     reply_markup: {
                         remove_keyboard: true
                     }
@@ -54,7 +54,7 @@ const userStep = new WizardScene('userStep',
 
             } else {
                 
-                ctx.telegram.sendMessage(ctx.chat.id , `❌ You have not joined. \n\n▪️Join our Telegram Group. \n▪️Join our Telegram Channel. \n\nClick the '✅ Check' button if done..`,{
+                ctx.telegram.sendMessage(ctx.chat.id , `❌ You have not joined. \n\n<a href="https://t.me/deemtoken">Telegram Group</a>\n▪️Join our <a href="https://t.me/deemnews">Telegram Channel</a>. \n\nClick the '✅ Check' button if done..`,{
                     reply_markup: {
                         inline_keyboard: [
                             [{text: "✅ Check" , callback_data: "checkGroup"}]
@@ -69,7 +69,7 @@ const userStep = new WizardScene('userStep',
     ctx=>{
         ctx.session.tw = ctx.update.message.text
 
-        ctx.telegram.sendMessage(ctx.chat.id , `▪️ Follow us on Instagram.\nhttps://instagram.com/deemtoken \n\nThen click "✅ Done" button.`,{
+        ctx.telegram.sendMessage(ctx.chat.id , `▪️ Follow us on <a href="https://instagram.com/deemtoken">Instagram. </a> \n\nThen click "✅ Done" button.`,{
             reply_markup: {
                 inline_keyboard: [
                     [{text: "✅ Done",callback_data: 'in'}]
