@@ -246,9 +246,6 @@ bot.action('home',ctx=>{
     signup(ctx)
 })
 
-bot.hears('Back',ctx=>{
-    signup(ctx)
-})
 
 
 
@@ -285,11 +282,7 @@ bot.hears('👤 Account',ctx=>{
 
     userModel.find({userId: ctx.from.id}).then((user)=>{
         ctx.telegram.sendMessage(ctx.chat.id , `<b>👤 Name:</b> ${user[0].name} \n<b>💴 Balance:</b> ${user[0].balance} \n<b>👥 Total Referrals:</b> ${user[0].ref_count} \n\n<b>🎞 Your Referral link:</b> \nhttps://t.me/${ctx.botInfo.username}?start=${ctx.from.id}`,{
-            reply_markup: {
-                keyboard: [
-                    [{text: "Back"}]
-                ],
-            },
+            
             parse_mode: "HTML"
         })
     })
@@ -301,11 +294,7 @@ bot.hears('📑 Information',ctx=>{
 
     userModel.find({userId: ctx.from.id}).then((user)=>{
         ctx.telegram.sendMessage(ctx.chat.id , `<b>Your Saved Details: </b> \n<b>Wallet:</b> ${user[0].wallet} \n<b>Twitter:</b> ${user[0].twitter} `,{
-            reply_markup: {
-                keyboard: [
-                    [{text: "Back"}]
-                ]
-            },
+            
             parse_mode: "HTML"
         })
     })
