@@ -1,0 +1,25 @@
+{
+  "name": "deem_airdrop",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon app.js",
+    "start": "micro-bot"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.26.1",
+    "micro-bot": "^2.5.3",
+    "mongoose": "^6.2.7",
+    "promise-svg2img": "^0.2.0",
+    "svg-captcha": "^1.4.0",
+    "svg2img": "^0.9.4"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
