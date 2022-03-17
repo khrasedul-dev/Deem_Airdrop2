@@ -248,8 +248,6 @@ bot.action('home',ctx=>{
 
 
 
-
-
 bot.on('new_chat_members',ctx=>{
     const userId = ctx.from.id
 
